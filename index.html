@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    canvas {
+      border: 1px solid black;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="myCanvas" width="400" height="300"></canvas>
+
+  <script>
+    var canvas = document.getElementById("myCanvas");
+    var context = canvas.getContext("2d");
+
+    // Dessiner le toit
+    context.fillStyle = "#cc6633"; // Couleur du toit
+    context.beginPath();
+    context.moveTo(100, 150);
+    context.lineTo(300, 150);
+    context.lineTo(200, 50);
+    context.closePath();
+    context.fill();
+
+    // Dessiner la base de la maison
+    context.fillStyle = "#ffcc66"; // Couleur de la maison
+    context.fillRect(100, 150, 200, 150);
+
+    // Dessiner la porte
+    context.fillStyle = "#996633"; // Couleur de la porte
+    context.fillRect(180, 250, 40, 50);
+
+    // Dessiner les fenêtres
+    context.fillStyle = "#66ccff"; // Couleur des fenêtres
+    context.fillRect(120, 180, 40, 40);
+    context.fillRect(240, 180, 40, 40);
+  </script>
+</body>
+</html>
