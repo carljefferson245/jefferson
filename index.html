@@ -1,40 +1,43 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <style>
-    canvas {
-      border: 1px solid black;
-    }
-  </style>
-</head>
-<body>
-  <canvas id="myCanvas" width="400" height="300"></canvas>
+<!-- saved from url=(0045)file:///C:/Users/user/ProjetCanvas/index.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Cours JavaScript</title>
+        
+        <link rel="stylesheet" href="file:///C:/Users/user/ProjetCanvas/cours.css">
+        <script src="file:///C:/Users/user/ProjetCanvas/cours.js" async=""></script>
+        <style>
+           #c1{
+                background-color: #fff;
+            }
+        </style>
+    </head>
+    <body>
+        <canvas id="c1" width="510" height="300" style="border: 1px solid #501111;"></canvas>
+    
+    <script>
+        let canvas = document.getElementById('c1');
+        let ctx = canvas.getContext('2d');
 
-  <script>
-    var canvas = document.getElementById("myCanvas");
-    var context = canvas.getContext("2d");
-
-    // Dessiner le toit
-    context.fillStyle = "#cc6633"; // Couleur du toit
-    context.beginPath();
-    context.moveTo(100, 150);
-    context.lineTo(300, 150);
-    context.lineTo(200, 50);
-    context.closePath();
-    context.fill();
-
-    // Dessiner la base de la maison
-    context.fillStyle = "#ffcc66"; // Couleur de la maison
-    context.fillRect(100, 150, 200, 150);
-
-    // Dessiner la porte
-    context.fillStyle = "#996633"; // Couleur de la porte
-    context.fillRect(180, 250, 40, 50);
-
-    // Dessiner les fenêtres
-    context.fillStyle = "#66ccff"; // Couleur des fenêtres
-    context.fillRect(120, 180, 40, 40);
-    context.fillRect(240, 180, 40, 40);
-  </script>
-</body>
-</html>
+        //le toit de la maison
+       
+        ctx.beginPath();
+        ctx.moveTo(40.5,120);
+        ctx.lineTo(140,30);
+        ctx.lineTo(220,30);
+        ctx.lineTo(340,30);
+        ctx.lineTo(450,120);
+        ctx.closePath();
+        ctx.moveTo(250,120);
+        ctx.lineTo(140,30);
+        ctx.strokeStyle= '#000';
+        ctx.lineWidth= 3;
+        ctx.stroke();
+        ctx.strokeRect(40, 121, 210, 130);
+        ctx.strokeRect(250, 121, 200, 130);
+        ctx.strokeRect(115, 185.5, 50, 65);
+        ctx.strokeRect(350, 160, 35, 35);
+        ctx.beginPath()
+        ctx.arc(140, 80, 15, 0, 2 * Math.PI, false);
+        ctx.stroke();
+    </script>
+</body></html>
