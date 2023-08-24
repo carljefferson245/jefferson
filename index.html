@@ -7,7 +7,7 @@
         <script src="file:///C:/Users/user/ProjetCanvas/cours.js" async=""></script>
         <style>
            #c1{
-                background-color: #fff;
+                //background-color: gray;
             }
         </style>
     </head>
@@ -17,6 +17,7 @@
     <script>
         let canvas = document.getElementById('c1');
         let ctx = canvas.getContext('2d');
+        let context = canvas.getContext("2d");
 
         //le toit de la maison
        
@@ -35,9 +36,20 @@
         ctx.strokeRect(40, 121, 210, 130);
         ctx.strokeRect(250, 121, 200, 130);
         ctx.strokeRect(115, 185.5, 50, 65);
-        ctx.strokeRect(350, 160, 35, 35);
+        ctx.strokeRect(340, 160, 35, 35);
+		ctx.strokeRect(390, 185, 35, 65);
+		ctx.strokeRect(290, 185, 35, 65);
         ctx.beginPath()
-        ctx.arc(140, 80, 15, 0, 2 * Math.PI, false);
         ctx.stroke();
+       
+	   
+	   
+ // Dessiner les emojis
+    var emojiSize = 40;
+
+    // Emoji soleil
+    context.font = emojiSize + "px Arial";
+    context.fillText("😊", 40, 60);
+
     </script>
 </body></html>
